@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mariuszmmm/kalkulator-react/static/css/main.52dfa90a.css",
-    "main.js": "/mariuszmmm/kalkulator-react/static/js/main.ab4bd428.js",
-    "static/js/787.b6e11d14.chunk.js": "/mariuszmmm/kalkulator-react/static/js/787.b6e11d14.chunk.js",
-    "index.html": "/mariuszmmm/kalkulator-react/index.html",
-    "main.52dfa90a.css.map": "/mariuszmmm/kalkulator-react/static/css/main.52dfa90a.css.map",
-    "main.ab4bd428.js.map": "/mariuszmmm/kalkulator-react/static/js/main.ab4bd428.js.map",
-    "787.b6e11d14.chunk.js.map": "/mariuszmmm/kalkulator-react/static/js/787.b6e11d14.chunk.js.map"
+    "main.css": "/kalkulator-react/static/css/main.52dfa90a.css",
+    "main.js": "/kalkulator-react/static/js/main.09b10016.js",
+    "static/js/787.b6e11d14.chunk.js": "/kalkulator-react/static/js/787.b6e11d14.chunk.js",
+    "index.html": "/kalkulator-react/index.html",
+    "main.52dfa90a.css.map": "/kalkulator-react/static/css/main.52dfa90a.css.map",
+    "main.09b10016.js.map": "/kalkulator-react/static/js/main.09b10016.js.map",
+    "787.b6e11d14.chunk.js.map": "/kalkulator-react/static/js/787.b6e11d14.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.52dfa90a.css",
-    "static/js/main.ab4bd428.js"
+    "static/js/main.09b10016.js"
   ]
 }
