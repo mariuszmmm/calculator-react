@@ -1,29 +1,100 @@
-import "./style.css"
+import "./style.css";
+// import {calculatorOn} from "../App";
+// import aaa from "../App.js";
 
-export const Keyboard = () => (
+
+export const Keyboard = ({ calculatorOn, calculatorOff, enterDigit, backspace, changeSign, squareRoot, percent, basicOperations, equals }) => (
   <div className="containerKeys">
-    <button className="key key--min key--on">ON</button>
-    <button className="key key--min">OFF</button>
+    <button
+      className="key key--min key--on"
+      onClick={calculatorOn}
+    >ON</button>
+    <button
+      className="key key--min"
+      onClick={calculatorOff}
+    >OFF</button>
     <div></div>
-    <button className="key key--min">⇽</button>
-    <button className="key key--min">+/-</button>
-    <button className="key key--min">√</button>
-    <button className="key key--min">%</button>
-    <button className="key key--min">/</button>
-    <button className="key key--dark">7</button>
-    <button className="key key--dark">8</button>
-    <button className="key key--dark">9</button>
-    <button className="key">x</button>
-    <button className="key key--dark">4</button>
-    <button className="key key--dark">5</button>
-    <button className="key key--dark">6</button>
-    <button className="key">-</button>
-    <button className="key key--dark">1</button>
-    <button className="key key--dark">2</button>
-    <button className="key key--dark">3</button>
-    <button className="key key--max">+</button>
-    <button className="key key--dark">0</button>
-    <button className="key key--dark">,</button>
-    <button className="key key--dark">=</button>
+    <button
+      className="key key--min"
+      onClick={backspace}
+    >⇽</button>
+    <button
+      className="key key--min"
+      onClick={changeSign}
+    >+/-</button>
+    <button
+      className="key key--min"
+      onClick={squareRoot}
+    >√</button>
+    <button
+      className="key key--min"
+      onClick={percent}
+    >%</button>
+    <button
+      className="key key--min"
+      onClick={() => basicOperations("/")}
+    >/</button>
+    <button
+      className="key key--dark"
+      onClick={() => enterDigit("7")}
+    >7</button>
+    <button
+      className="key key--dark"
+      onClick={() => enterDigit("8")}
+    >8</button>
+    <button
+      className="key key--dark"
+      onClick={() => enterDigit("9")}
+    >9</button>
+    <button
+      className="key"
+      onClick={() => basicOperations("x")}
+    >x</button>
+    <button
+      className="key key--dark"
+      onClick={() => enterDigit("4")}
+    >4</button>
+    <button
+      className="key key--dark"
+      onClick={() => enterDigit("5")}
+    >5</button>
+    <button
+      className="key key--dark"
+      onClick={() => enterDigit("6")}
+    >6</button>
+    <button
+      className="key"
+      onClick={() => basicOperations("-")}
+    >-</button>
+    <button
+      className="key key--dark"
+      onClick={() => enterDigit("1")}
+    >1</button>
+    <button
+      className="key key--dark"
+      onClick={() => enterDigit("2")}
+    >2</button>
+    <button
+      className="key key--dark"
+      onClick={() => enterDigit("3")}
+    >3</button>
+    <button
+      className="key key--max"
+      onClick={() => basicOperations("+")}
+    >+</button>
+    <button
+      className="key key--dark"
+      onClick={() => enterDigit("0")}
+    >0</button>
+    <button
+      className="key key--dark"
+      onClick={() => enterDigit(",")}
+    >,</button>
+    <button
+      className="key key--dark"
+      onClick={equals}
+    >=</button>
   </div>
 )
+
+
