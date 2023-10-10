@@ -1,7 +1,4 @@
 import "./style.css";
-// import {calculatorOn} from "../App";
-// import aaa from "../App.js";
-
 
 export const Keyboard = ({ calculatorOn, calculatorOff, enterDigit, backspace, changeSign, squareRoot, percent, basicOperations, equals }) => (
   <div className="containerKeys">
