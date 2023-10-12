@@ -58,24 +58,14 @@ export const useFunction = () => {
   };
 
   const squareRoot = () => {
-    let currentDisplay;
-
     if (off) return;
-    if (display !== "") { currentDisplay = Math.sqrt(Number(display)) }
-    else return;
-
-    if (result !== "" || componentB !== "") {
-      setComponentB("");
-      setResult("");
-    };
-
+    let currentDisplay = Math.sqrt(Number(display));
     setDisplay(currentDisplay + "");
-    setComponentA(Number(currentDisplay));
+    selectComponent(currentDisplay)
   };
 
   const percent = () => {
     let currentComponentB;
-    let calculation;
 
     if (off) return;
     if (componentB !== "" && result === "") {
@@ -86,7 +76,7 @@ export const useFunction = () => {
         currentComponentB = (componentB / 100);
       };
 
-      calculation = calculate(componentA, action, currentComponentB)
+      let calculation = calculate(componentA, action, currentComponentB)
       setDisplay(calculation + "");
       setComponentB(calculation);
       setResult(calculation);
@@ -138,7 +128,11 @@ export const useFunction = () => {
     } else {
       currentDisplay = display;
     };
-    if (result !== "") setResult("");
+    if (result !== "") {
+      setAction("");
+      setComponentB("");
+      setResult("");
+    };
     if (currentDisplay.length >= 9) return;
 
     const currentChar = (char) => {
