@@ -1,3 +1,3 @@
 
 
-https://mariuszmmm.github.io/currency-converter-react/
+https://mariuszmmm.github.io/calculator-react/
