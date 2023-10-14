@@ -5,7 +5,7 @@ It has an on/off switch, a function to clear the last entered digit, and a toggl
 #
  Check it out:     -->    https://mariuszmmm.github.io/calculator-react/   <--
 #
-![Calculator](/calculator.png)
+![Calculator](%PUBLIC_URL%/calculator.png)
 
 
 ## Technologies Used
