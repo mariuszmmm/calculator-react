@@ -7,7 +7,6 @@ It has an on/off switch, a function to clear the last entered digit, and a toggl
 #
 ![Calculator](/public/calculator.png)
 
-
 ## Technologies Used
   
 - Javascript ES6
