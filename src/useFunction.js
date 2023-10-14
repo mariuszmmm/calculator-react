@@ -9,6 +9,37 @@ export const useFunction = () => {
   const [off, setOff] = useState(true);
   const [readyToClean, setReadyToClean] = useState(false);
 
+  useEffect(() => {
+    let currentDisplay = display;
+    let displayInteger = (`${Math.round(Number(display))}`);
+
+    if (display) {
+
+      if ((Math.abs(Number(display)) < 0.00000001) && (result)) {
+        currentDisplay = "0";
+        setComponentA("0");
+        setAction("");
+        setComponentB("");
+        setResult("");
+      };
+
+      if (currentDisplay.length > 9) {
+        if ((displayInteger.length > 9)) {
+          currentDisplay = (Number(currentDisplay).toExponential(3) + "")
+        } else {
+          currentDisplay = Number(currentDisplay).toFixed(displayInteger.length >= 9 ? 0 : 9 - displayInteger.length);
+        };
+      };
+
+      if (["NaN", "Infinity", "-Infinity"].includes(currentDisplay)) {
+        currentDisplay = "ERROR";
+        setOff(true);
+      };
+    };
+
+    setDisplay(currentDisplay);
+  }, [display, result]);
+
   const calculatorOn = () => {
     setDisplay("0");
     setComponentA(0);
@@ -173,37 +204,6 @@ export const useFunction = () => {
       default: return
     };
   };
-
-  useEffect(() => {
-    let currentDisplay = display;
-    let displayInteger = (`${Math.round(Number(display))}`);
-
-    if (display) {
-
-      if ((Math.abs(Number(display)) < 0.00000001) && (result)) {
-        currentDisplay = "0";
-        setComponentA("0");
-        setAction("");
-        setComponentB("");
-        setResult("");
-      };
-
-      if (currentDisplay.length > 9) {
-        if ((displayInteger.length > 9)) {
-          currentDisplay = (Number(currentDisplay).toExponential(3) + "")
-        } else {
-          currentDisplay = Number(currentDisplay).toFixed(displayInteger.length >= 9 ? 0 : 9 - displayInteger.length);
-        };
-      };
-
-      if (["NaN", "Infinity", "-Infinity"].includes(currentDisplay)) {
-        currentDisplay = "ERROR";
-        setOff(true);
-      };
-    };
-
-    setDisplay(currentDisplay);
-  }, [display, result]);
 
   return {
     display,
