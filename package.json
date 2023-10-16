@@ -1,8 +1,8 @@
 {
-  "name": "kalkulator-react",
+  "name": "calculator-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mariuszmmm.github.io/kalkulator-react/",
+  "homepage": "https://mariuszmmm.github.io/calculator-react/",
   "dependencies": {
     "@babel/plugin-transform-json-strings": "^7.22.11",
     "@testing-library/jest-dom": "^5.17.0",
