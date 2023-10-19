@@ -40,6 +40,28 @@ export const useFunction = () => {
     setDisplay(currentDisplay);
   }, [display, result]);
 
+  const selectComponent = (currentDisplay) => {
+    if (!action || result !== "") {
+      setComponentA(Number(currentDisplay))
+    } else {
+      setComponentB(Number(currentDisplay))
+    };
+  };
+
+  const calculate = (a, operator, b) => {
+    switch (operator) {
+      case "+":
+        return a + b;
+      case "-":
+        return a - b;
+      case "x":
+        return a * b;
+      case "/":
+        return a / b;
+      default: return
+    };
+  };
+
   const calculatorOn = () => {
     setDisplay("0");
     setComponentA(0);
@@ -181,28 +203,6 @@ export const useFunction = () => {
     };
 
     setDisplay(currentDisplay);
-  };
-
-  const selectComponent = (currentDisplay) => {
-    if (!action || result !== "") {
-      setComponentA(Number(currentDisplay))
-    } else {
-      setComponentB(Number(currentDisplay))
-    };
-  };
-
-  const calculate = (a, operator, b) => {
-    switch (operator) {
-      case "+":
-        return a + b;
-      case "-":
-        return a - b;
-      case "x":
-        return a * b;
-      case "/":
-        return a / b;
-      default: return
-    };
   };
 
   return {
