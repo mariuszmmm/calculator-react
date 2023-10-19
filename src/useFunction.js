@@ -28,6 +28,14 @@ export const useFunction = () => {
           currentDisplay = (Number(currentDisplay).toExponential(3) + "")
         } else {
           currentDisplay = Number(currentDisplay).toFixed(displayInteger.length >= 9 ? 0 : 9 - displayInteger.length);
+
+          while (
+            (currentDisplay.includes(".") && !currentDisplay.includes("e")
+              &&
+              (currentDisplay.charAt(currentDisplay.length - 1) === "0"))
+            ||
+            (display.charAt(currentDisplay.length - 1) === ".")
+          ) { currentDisplay = currentDisplay.slice(0, -1) };
         };
       };
 
