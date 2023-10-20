@@ -1,13 +1,12 @@
-import "./style.css"
+import { DisplayContainer, Input } from "./styled"
 
 export const Display = ({ display }) => (
-  <div className="containerDisplay">
-    <input
-      className="inputDisplay"
+  <DisplayContainer>
+    <Input
       value={display}
       max="999999999"
       type="text"
       disabled
     />
-  </div>
+  </DisplayContainer>
 )

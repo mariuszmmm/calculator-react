@@ -1,4 +1,6 @@
-.containerDisplay {
+import { styled } from "styled-components";
+
+export const DisplayContainer = styled.div`
   display: grid;
   justify-items: center;
   align-content: center;
@@ -6,9 +8,9 @@
   width: 90%;
   height: 75px;
   border: 1px solid rgb(100, 100, 100);
-}
+`;
 
-.inputDisplay {
+export const Input = styled.input`
   background-color: white;
   color: black;
   font-family: 'Quantico', sans-serif;
@@ -19,5 +21,4 @@
   font-size: 50px;
   text-align: right;
   padding: 0 5px;
-}
-
+`;
