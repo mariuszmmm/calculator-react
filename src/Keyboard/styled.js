@@ -1,4 +1,4 @@
-import { styled, css } from "styled-components";
+import styled, { css } from "styled-components";
 
 export const ContainerKeys = styled.div`
   display: grid;
@@ -15,13 +15,7 @@ export const ContainerKeys = styled.div`
 export const Button = styled.button`
   display: flex;
   width: 65px;
-  height: ${({ min, max }) => {
-    if (min) {
-      return "30px"
-    } else if (max) {
-      return "103px"
-    } else { return "45px" };
-  }};
+  height: 45px;
   border: 1px solid black;
   justify-content: center;
   align-items: center;
@@ -29,32 +23,40 @@ export const Button = styled.button`
   font-weight: 900;
   box-shadow: 2px 2px 2.5px 2.5px black;
   border-radius: 5px;
-  background-color: ${({ on, dark }) => {
-    if (on) {
-      return css`hsl(0, 100%, 50%)`;
-    } else if (dark) {
-      return css`hsl(0, 0%, 60%)`;
-    } else {
-      return css`hsl(0, 0%, 95%)`;
-    }
-  }};
-  grid-area: ${(props) => (props.max ? "5 / 4 /span 2 / 5" : "")};
+  background-color: hsl(0, 0%, 95%);
+
+  ${({ min }) => min && css`
+    height : 30px;
+   `};
+
+  ${({ max }) => max && css`
+    height : 103px;
+    grid-area: 5 / 4 /span 2 / 5;
+  `};
+
+  ${({ on }) => on && css`
+  background-color: hsl(0, 100%, 50%)
+  `};
+
+  ${({ dark }) => dark && css`
+  background-color: hsl(0, 0%, 60%)
+  `};
 
   &:hover {
-    background-color: ${({ on, dark }) => {
-    if (on) {
-      return css`hsl(0, 100%, 45%)`;
-    } else if (dark) {
-      return css`hsl(0, 0%, 50%)`;
-    } else {
-      return css`hsl(0, 0%, 80%)`
-    }
-  }}
+    background-color: hsl(0, 0%, 80%);
+
+    ${({ on }) => on && css`
+      background-color: hsl(0, 100%, 45%)
+    `};
+
+    ${({ dark }) => dark && css`
+      background-color: hsl(0, 0%, 50%)
+    `};
   };
 
   &:active {
-  box-shadow: 1px 1px 1px 1px black;
-  transition: 0.05s;
-  color: rgb(70, 70, 70);
+    box-shadow: 1px 1px 1px 1px black;
+    transition: 0.05s;
+    color: rgb(70, 70, 70);
   }
 `;
