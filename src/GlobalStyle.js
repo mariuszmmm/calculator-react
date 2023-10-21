@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background-image: url("${background}");
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Roboto Flex', sans-serif;
